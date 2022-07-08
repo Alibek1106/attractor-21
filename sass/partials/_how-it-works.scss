@@ -1,0 +1,73 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.how-it-works{
+    margin-bottom: 134px;
+    h2{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;   
+        text-align: center;
+        color: $dark;
+        margin-bottom: 21px;
+    }
+    .hiw-descr{
+        font-size: 18px;
+        max-width: 754px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 61px;
+    }
+    .hiw-cards{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        .card{
+            border: 1px solid #E7E8E3;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            width: 405px;
+            padding: 49px 33px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            .card-header{
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 34px;
+                color: $dark;
+                padding-top: 72px;
+                background-repeat: no-repeat;
+                background-position: center 0;
+                margin-bottom: 17px;
+            }
+            .card-header-1{
+                background-image: url('../images/house.svg');
+            }
+            .card-header-2{
+                background-image: url('../images/receipt.svg');
+            }
+            .card-header-3{
+                background-image: url('../images/key.svg');
+            }
+            p{
+                margin-bottom: 26px;
+            }
+            a{
+                display: inline!important;
+                margin-top: auto;
+                font-weight: 700;
+                color: $dark;
+                padding-right: 20px;
+                background-image: url('../images/arrow-right.svg');
+                background-repeat: no-repeat;
+                background-position: 66% center;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

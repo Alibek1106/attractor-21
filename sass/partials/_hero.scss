@@ -1,0 +1,100 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.hero{
+    display: flex;
+    margin-bottom: 113px;
+    .hero-left{
+        width: 50%;
+        padding-left: 20px;
+        background: url('../images/stairs-up.svg'), url('../images/stairs-down.svg') 100% 100% no-repeat, #eee;
+        background-repeat: no-repeat;
+        display: flex;
+        .hero-text-block{
+            margin: auto 0 auto auto;
+            max-width: 644px;
+            .find{
+                padding: 4px 12px;
+                background: #E7E8E3;
+                border-radius: 32px;
+                color: $dark;
+                font-size: 14px;
+                display: inline;
+            }
+            h1{
+                font-size: 56px;
+                line-height: 67px;
+                margin-top: 8px;
+                margin-bottom: 21px;
+                color: $dark;
+            }
+            .find-descr{
+                display: block;
+                max-width: 503px;
+                font-size: 20px;
+                margin-bottom: 21px;
+            }
+            .form-row{
+                position: relative;
+                .search-icon{
+                    background-image: url('../images/search.svg');
+                    display: block;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    top: 15px;
+                    left: 16px;
+                }
+                input{
+                    background: #FFFFFF;
+                    border: 1px solid #E7E8E3;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+                    border-radius: 6px;
+                    width: 310px;
+                    height: 48px;
+                    padding-left: 56px;
+                    font-size: 20px;
+                    @include sm{
+                        width: 200px;
+                    }
+                }
+                button{
+                    border: none;
+                    background-color: $orange;
+                    color: #fff;
+                    padding: 10px 18px;
+                    font-size: 20px;
+                    line-height: 30px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                }
+                button:hover{
+                    background-color: #cc7a59;
+                    transition: 0.3s;
+                }
+                button:active{
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                }
+            }
+            @include xl{
+                max-width: 1320px;
+                padding: 0 20px;
+                margin: 0 auto;
+            }
+
+        }
+        @include xl{
+            width: 100%;
+            padding: 50px 0;
+        }
+    }
+    .hero-right{
+        width: 50%;
+        font-size: 0;
+        @include xl{
+            display: none;
+        }
+    }
+}
+

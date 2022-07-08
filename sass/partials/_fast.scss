@@ -1,0 +1,118 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.fast-process{
+    margin-bottom: 153px;
+    .fast-row{
+        display: flex;
+        .fast-left{
+            width: 50%;
+            font-size: 0;
+            @include xl{
+                display: none;
+            }
+        }
+        .fast-right{
+            width: 50%;
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            @include xl{
+                width: 100%;
+            }
+            .fast-text-block{
+                margin: auto 0;
+                .quick{
+                    padding: 4px 12px;
+                    background-color: #E7E8E3;
+                    border-radius: 32px;
+                    display: inline;
+                }
+                h2{
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 58px;
+                    color: $dark;
+                    margin-top: 21px;
+                    margin-bottom: 29px;
+                }
+                .fast-descr{
+                    font-size: 18px;
+                    margin-bottom: 29px;
+                }
+                .descr{
+                    display: flex;
+                    margin-bottom: 24px;
+                    flex-wrap: wrap;
+                    .descr-left{
+                        width: 50%;
+                        padding-right: 42px;
+                        @include xsm{
+                            width: 100%;
+                            padding-right: 0;
+                            margin-bottom: 20px;
+                        }
+                        h4{
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 28px;
+                            padding-top: 64px;
+                            color: $dark;
+                            background-image: url('../../images/payments.svg');
+                            background-repeat: no-repeat;
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .descr-right{
+                        width: 50%;
+                        @include xsm{
+                            width: 100%;
+                        }
+                        h4{
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 28px;
+                            padding-top: 64px;
+                            color: $dark;
+                            background-image: url('../../images/description.svg');
+                            background-repeat: no-repeat;
+                            margin-bottom: 18px;
+                        }
+                    }
+                }
+                .fast-btns{
+                    display: flex;
+                    align-items: center;
+                    button{
+                        border: 1px solid #E7E8E3;
+                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+                        border-radius: 6px;
+                        padding: 13px 25px;
+                        background-color: #fff;
+                        color: $dark;
+                        margin-right: 24px;
+                        cursor: pointer;
+                    }
+                    button:hover{
+                        background-color: $orange;
+                        color: #fff;
+                        transition: 0.2s;
+                    }
+                    button:active{
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                    }
+                    a{
+                        color: $dark;
+                        padding-right: 20px;
+                        background-image: url('../images/arrow-right.svg');
+                        background-repeat: no-repeat;
+                        background-position: right center;
+                    }
+                    a:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.header{
+    padding: 16px 0;
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .logo{
+            @include md{
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+            color: $darker;
+            li:not(:last-child){
+                margin-right: 40px;
+                @include xsm{
+                    margin-right: 20px;
+                }
+            }
+            @include lm{
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        .header-btns{
+            display: flex;
+            align-items: center;
+            a{
+                color: $dark;
+                margin-right: 24px;
+                padding: 9px 25px 9px 45px;
+                box-shadow: 0 0 2px rgba( 0, 0, 0, 0.5);
+                background-image: url(../images/shopping_bag.svg);
+                background-repeat: no-repeat;
+                background-position: 21px center;
+                border-radius: 6px;
+            }
+            button{
+                color: #fff;
+                background-color: $orange;
+                border: none;
+                padding: 9px 27px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: #cc7a59;
+                transition: 0.3s;
+            }
+            button:active{
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            @include lm{
+                margin: 0 auto;
+            }
+        }
+    }
+}
